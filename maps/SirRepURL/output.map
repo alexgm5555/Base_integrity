@@ -1,0 +1,5 @@
+<map version="1.3">
+  <param name="estadoSConnect" type="com.progress.lang.Character" value="@pocestado"/>
+  <param name="urlSConnect" type="com.progress.lang.LongChar" value="@polcdata"/>
+  <param name="idSConnect" type="com.progress.lang.Integer" value="@poireturnid"/>
+</map>

@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>Mi Perfil</title>
+</head>
+<body>
+<p align="center">
+<img src="images/perfil-54.png" alt="Mi Perfil" width="200" height="44">
+</p>
+<p id="contenido" align="left" style="font-family:Tahoma;font-size:10pt;">
+</p>
+<script>
+var nombre=sessionStorage.getItem("nombrecompleto");
+var usuario=sessionStorage.getItem("usuario");
+var cedula=sessionStorage.getItem("cedula");
+var correo=sessionStorage.getItem("correo");
+document.getElementById("contenido").innerHTML = "<b>"+nombre+"</b><br><b>Usuario: </b>"+usuario+"<br>"+
+    "<b>C.C.: </b>"+cedula+"<br><b>Correo: </b>"+correo+"<br>";
+</script>
+</body>
+</html>

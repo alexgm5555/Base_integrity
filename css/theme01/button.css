@@ -1,0 +1,35 @@
+.botonDescargar {
+    height: 46px;
+    width: 51px;
+    background-image:url("images/descarga.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.botonVer {
+    height: 46px;
+    width: 51px;
+    background-image:url("images/ver.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.botonPdf {
+    height: 46px;
+    width: 51px;
+    background-image:url("images/pdf.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.botonNoVer {
+    height: 46px;
+    width: 51px;
+    background-image:url("images/NoVer.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.botonNoPdf {
+    height: 46px;
+    width: 51px;
+    background-image:url("images/NoPdf.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}

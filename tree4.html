@@ -1,0 +1,91 @@
+<html>
+<head>
+<link rel="stylesheet" href="./css/style.min.css" />
+
+</head>
+<body>
+    <script src="./scripts/jquery-1.10.2.min.js"></script>
+    <script src="./scripts/jstree.min.js"></script>
+    <div id="jstree2" ondrop="drop(event)" ondragover="allowDrop(event)" style="font-family:Tahoma;font-size:9pt;"></div>
+    <script>
+       $(function () {
+       $('#jstree2').jstree(JSON.parse(sessionStorage.getItem("txtJson2")));
+    $("#jstree2").jstree({
+    "crrm" : {
+            "move" : {
+                "check_move" : function (m) {
+                console.log(m);
+                if(m.p=="before"|| m.p=="after")
+                    return false;
+                if(m.o.attr('movable'))
+                    return true;
+                else
+                    return false;
+                   
+           
+                }
+            }
+        },
+   
+        "dnd" : {
+           
+            /*
+            "drop_finish" : function (data) {
+            alert('drop finish');
+            console.log(data);
+                //this is where the actual call to the sever is made for rearranging the triples for drag n drop.
+                //console.log(data);
+                //console.log('target '+ data.r);
+               
+            },
+           
+            "drag_check" : function (data) {
+                if(data.r.attr("id") == "phtml_1") {
+                    return false;
+                }
+                return {
+                    after : false,
+                    before : false,
+                    inside : false
+                };
+            }
+           
+           
+            "drag_finish" : function (data) {
+                alert("DRAG OK");
+            }
+           
+            */
+           
+           
+        },
+        "plugins" : [ "themes", "html_data", "dnd", "crrm" ]
+    });
+});
+$('#jstree2').bind('move_node.jstree',function(event,data){console.log(event);console.log(data);
+
+    //console.log('the item being dragged '+data.rslt.o[0].id+ 'target '+data.rslt.np[0].id);
+    //lets assume we want to roll back
+    /*
+    jQuery.jstree.rollback(data.rlbk);
+    alert('this move is not allowed');
+    */   
+});
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+alert(document.getElementById(data).id);
+}
+    </script>
+</body>
+</html>

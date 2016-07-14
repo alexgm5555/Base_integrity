@@ -1,0 +1,6 @@
+<map version="1.3">
+  <param name="funcionestodas" type="com.progress.lang.LongChar" value="@polcdata1"/>
+  <param name="estadoroles" type="com.progress.lang.Character" value="@pocestado"/>
+  <param name="jsonroles" type="com.progress.lang.Character" value="@polcdata"/>
+  <param name="returnidroles" type="com.progress.lang.Integer" value="@poireturnid"/>
+</map>

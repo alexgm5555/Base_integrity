@@ -1,0 +1,10 @@
+#Sun Aug 17 11:58:14 COT 2014
+application.name=Base_Integrity
+adapter.version=8.1
+module.type=com.savvion.studio.designer.module.webapp
+application.mainprocessname=Base_Integrity
+module.id=4edde648-96b6-4d2c-87e0-0dcec025061e
+module.version=8
+application.mainappfile=Base_Integrity/WEB-INF/template/Base_Integrity.swt
+module.name=Base_Integrity
+application.root=Base_Integrity
